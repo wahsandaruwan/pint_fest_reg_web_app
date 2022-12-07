@@ -1,0 +1,204 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corinthia&family=Dancing+Script:wght@500&family=Niconne&family=Rouge+Script&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Common */
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Registration */
+.reg-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../public/assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.reg-container .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+/* Info */
+.reg-container .info {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 120px;
+  /* background-color: #dbdada; */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.reg-container .info .logo {
+  max-width: 300px;
+  max-height: 300px;
+  margin-bottom: 20px;
+}
+
+.reg-container .info .logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.reg-container .info .contact {
+  width: max-content;
+  background-color: #dbdada;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.reg-container .info .contact label {
+  margin: 10px 0;
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #000000;
+}
+
+.reg-container .info .contact label svg {
+  font-size: 1.3rem;
+  margin-right: 10px;
+  color: #000000;
+}
+
+/* Form */
+.reg-container .reg-form {
+  max-width: 550px;
+  position: relative;
+  z-index: 20;
+  background-color: #dbdada;
+  border-radius: 10px;
+  padding: 25px;
+  margin-left: 120px;
+}
+
+.reg-container .reg-form p {
+  font-size: 3.2rem;
+  font-weight: 600;
+  font-family: "Niconne";
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.reg-container .reg-form p span {
+  font-family: "Niconne";
+  color: #cf397f;
+}
+
+.reg-container .reg-form input,
+.reg-container .reg-form select,
+.reg-container .reg-form .reg-btn,
+.reg-container .reg-form .year-picker {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.reg-container .reg-form .year-picker {
+  padding: 0;
+}
+
+.reg-container .reg-form > .reg-btn {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+.reg-container .reg-form > .reg-btn:hover {
+  color: #ffffff;
+  background-color: #494949;
+}
+
+.reg-container .reg-form .msg {
+  width: 100%;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.reg-container .reg-form .success {
+  background-color: #34ac52;
+}
+
+.reg-container .reg-form .error {
+  background-color: #c54730;
+}
+
+/* React datepicker */
+.react-datepicker__navigation-icon {
+  top: 5px !important;
+}
+
+.react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle {
+  margin-left: -8px !important;
+  margin-bottom: -7px !important;
+}
+
+/* Responsive */
+@media (max-width: 1300px) {
+  .reg-container .info {
+    margin-right: 20px;
+  }
+
+  .reg-container .reg-form {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .reg-container {
+    flex-direction: column;
+  }
+
+  .reg-container .info {
+    width: 100%;
+    margin: 30px 0 30px 0;
+  }
+
+  .reg-container .reg-form {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .reg-container .reg-form p {
+    text-align: center;
+  }
+}
