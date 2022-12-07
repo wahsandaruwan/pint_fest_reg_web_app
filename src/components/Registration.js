@@ -361,8 +361,9 @@ const Registration = () => {
               setRegister({ ...register, category: e.target.value })
             }
             autocomplete="off"
+            defaultValue="None"
           >
-            <option value="None" disabled selected hidden>
+            <option value="None" disabled hidden>
               Select your Car Category
             </option>
             <option value="Classic">Classic</option>
@@ -385,8 +386,9 @@ const Registration = () => {
                   setRegister({ ...register, vehicleModel: e.target.value })
                 }
                 autocomplete="off"
+                defaultValue="None"
               >
-                <option value="None" disabled selected hidden>
+                <option value="None" disabled hidden>
                   Select your vehicle model
                 </option>
                 {vehicleModels?.map((model) => (
