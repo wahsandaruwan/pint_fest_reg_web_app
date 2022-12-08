@@ -416,6 +416,9 @@ const Registration = () => {
                 minDate={new Date("1950")}
                 maxDate={new Date("2022")}
                 placeholderText="Vehicle Year"
+                onKeyDown={(e) => {
+                  e.preventDefault();
+                }}
               />
             </>
           ) : null}
