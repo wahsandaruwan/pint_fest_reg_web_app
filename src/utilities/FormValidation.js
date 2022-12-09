@@ -45,8 +45,6 @@ const validateVehicleYear = (vehicleYear) => {
 
   if (!vehicleYear) {
     error = "Enter your vehicle year!";
-  } else if (!/^\d{4}$/i.test(vehicleYear)) {
-    error = "Enter only a year using numbers!";
   }
 
   return error;
