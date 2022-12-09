@@ -19,6 +19,7 @@ import {
   validateNIC,
   validateVehicleYear,
 } from "../utilities/FormValidation";
+import { openWhatsAppClient } from "../utilities/WhatsApp";
 import { vehicleModels } from "../data/VehicleModels";
 import { db } from "../utilities/FirebaseConfig";
 
@@ -285,9 +286,10 @@ const Registration = () => {
             setTimeout(() => {
               setSuccess("");
               alert(
-                "Invitation has been sent to your email, Check the spam folder if you unable find it in the inbox folder!"
+                "Now you will be redirected to WhatsApp, You can type 'PinkFest' to confirm your participation!"
               );
-              window.location.href = "http://thepinkautoshop.com/";
+              openWhatsAppClient();
+              window.location.reload(true);
             }, 3000);
           })
           .catch((err) => {
